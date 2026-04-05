@@ -6,101 +6,41 @@
     <title>إلى دكتورتي الأبدية</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-        
-        body { 
-            margin: 0; 
-            background: #0d0d0d; /* أسود ملكي مطفي */
-            color: #000; 
-            font-family: 'Cairo', sans-serif; 
-            direction: rtl; 
-            text-align: right; 
-            overflow-x: hidden;
-        }
-
-        .container { 
-            width: 85%; 
-            max-width: 650px; 
-            margin: 50px auto; 
-            padding: 20px;
-            z-index: 10;
-            position: relative;
-        }
-
-        /* تأثير الحركة للبارتات */
-        .s { 
-            margin-bottom: 60px; 
-            padding: 30px; 
-            background: rgba(255, 193, 227, 0.95); /* وردي خفيف جداً يبرز النص الأسود */
-            border-radius: 45px; /* أقواس ناعمة وفخمة */
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-            opacity: 0; /* مخفي بالبداية */
-            transform: translateY(50px); /* نازل للي جوا */
-            transition: all 1.5s ease-out; /* سرعة الحركة */
-        }
-
-        /* الكلاس اللي يشغل الحركة */
-        .s.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        h2 { color: #d81b60; margin-bottom: 15px; font-weight: 700; border-bottom: 2px solid rgba(216, 27, 96, 0.2); display: inline-block; }
-        p { font-size: 19px; line-height: 2.2; margin: 0; font-weight: 400; }
-
-        .comment { 
-            font-style: italic; 
-            color: #ad1457; 
-            font-size: 16px; 
-            margin-top: 20px; 
-            padding-top: 15px;
-            border-top: 1px dashed #ad1457;
-        }
-
-        /* مطر القلوب */
-        .heart {
-            position: fixed;
-            top: -10%;
-            font-size: 18px;
-            color: rgba(255, 64, 129, 0.4); /* وردي شفاف مو نشاز */
-            user-select: none;
-            pointer-events: none;
-            z-index: 1;
-            animation: fall linear forwards;
-        }
-
-        @keyframes fall {
-            to { transform: translateY(110vh) rotate(360deg); }
-        }
-
-        .barcode-box { 
-            text-align: center; 
-            margin-top: 40px; 
-            padding: 30px; 
-            background: #fff; 
-            border-radius: 40px;
-            border: 3px solid #ff80ab;
-        }
-        .barcode-box p { color: #000; font-weight: bold; margin-bottom: 15px; background: none; }
+        body { margin: 0; background: #080808; color: #ffc1e3; font-family: 'Cairo', sans-serif; direction: rtl; text-align: right; overflow-x: hidden; }
+        .container { width: 85%; max-width: 650px; margin: 50px auto; padding: 20px; z-index: 10; position: relative; }
+        .s { margin-bottom: 60px; padding: 35px; background: rgba(15, 15, 15, 0.95); border: 1px solid rgba(255, 128, 171, 0.25); border-radius: 50px; box-shadow: 0 20px 50px rgba(0,0,0,0.9); opacity: 0; transform: translateY(40px); transition: all 1.2s ease-out; }
+        .s.visible { opacity: 1; transform: translateY(0); }
+        h2 { color: #ff80ab; margin-bottom: 15px; font-weight: 700; font-size: 24px; }
+        p { font-size: 19px; line-height: 2.1; margin: 0; color: #fce4ec; }
+        .comment { font-style: italic; color: #ff80ab; font-size: 15px; margin-top: 20px; padding-top: 15px; border-top: 1px dashed rgba(255, 128, 171, 0.3); }
+        .heart { position: fixed; top: -10%; font-size: 18px; color: rgba(255, 64, 129, 0.4); user-select: none; pointer-events: none; z-index: 1; animation: fall linear forwards; }
+        @keyframes fall { to { transform: translateY(110vh) rotate(360deg); } }
+        .barcode-box { text-align: center; margin-top: 40px; padding: 30px; background: #fff; border-radius: 45px; border: 2px solid #ff80ab; }
+        .barcode-box p { color: #000; font-weight: bold; margin-bottom: 15px; }
     </style>
 </head>
 <body>
-
     <div class="container">
         <div class="s">
-            <h2>اللقاء الأول – 16 يوليو (بالليل) ❤️</h2>
-            <p>الجو جان دافي والشمس تداعب المدينة، وأني واگف، گلبي يدگ بسرعة مو طبيعية. شفتها من بعيد، دكتورتي زهراء، گاعدة يم النافذة بالليل… عيونها التفتت إلي، وابتسامتها الخجولة بوسط هدوء الليل خلت گلبي يطير بصدري. جبت وياي جبس وعصير. ريحتها غمرتني بنسمة ليلية. تبادلنا النظرات، ولحكتها بالتلفون وبستها "قبلة عن بعد"… كل لحظة وياها جانت مليانة مشاعر صدگ.</p>
-            <div class="comment">😂 هنيالي عليكم: دكتورة وبالنافذة وبنص الليل وأنت جاي بجبس وعصير؟ والله يا عمر سوالفك تگعد بالگلب!</div>
-        </div>
-
-        <div class="s">
-            <h2>اللقاء الثاني – 17 يوليو ❤️</h2>
-            <p>شفتها من نافذة الطابق الثاني، وريحتها وصلتني قبل ما أكمل خطوة… أحس بشي يسحبني إلها سحل. گعدنا سوية وحجينا، لعبت بإيدها، وغفت على كتفي للحظة… جانت كافية تخلي گلبي يذوب ذوبان. بست إيدها وحرف اسمها "المحروق بالنار". لما راحت، حضنتني گدام الناس وبستني من رگبتي وخدي.</p>
-            <div class="comment">😉 تعليق "أخوك": غفت على كتفك وبست إيدها؟ ها يا "كبلات" الظيم! ربي يحفظكم لبعض.</div>
+            <h2>اللقاء الأول – 16 يوليو ❤️</h2>
+            <p>شفتها من شباك المصعد، وريحتها وصلتني قبل ما أكمل خطوة… أحس بشي يسحبني إلها سحل. گعدنا سوية وحجينا، لعبت بإيدها، وغفت على كتفي للحظة… جانت كافية تخلي گلبي يذوب ذوبان. بست إيدها وحرف اسمها "المحروق بالنار". لما راحت، حضنتني گدام الناس وبستني من رگبتي وخدي… حسيت كل ذرة بية صارت ملكها.</p>
+            <div class="comment">😉 تعليق "أخوك": لمحة من شباك المصعد وبست إيدها؟ ها يا "كبلات" الظيم! ربي يحفظكم لبعض.</div>
+        </div><div class="s">
+            <h2>اللقاء الثاني – 17 يوليو (سحر الليل) ❤️</h2>
+            <p>الجو جان دافي والظلمة تداعب ضوايات المدينة، وأني جنت گاعد، گلبي يدگ بسرعة مو طبيعية. شفتها من بعيد من ورا الشباك قبل لا تفوت، دكتورتي زهراء جتي هيَّ… عيونها التفتت إلي، وابتسامتها الخجولة بوسط هدوء الليل خلت گلبي يطير. 
+            جبت وياي جبس وعصير. ريحتها وصلتني قبل ما أشوفها… عطرها غمرني بنسمة ليلية. تبادلنا النظرات، ولحكتها بالتلفون وبستها "قبلة عن بعد"… كل لحظة وياها جانت مليانة مشاعر صدگ.</p>
+            <div class="comment">😂 مخرجنا البطل: يعني أنت الكاعد وهي الجتي؟ والله يا عمر سوالفك تگعد بالگلب!</div>
         </div>
 
         <div class="s">
             <h2>القرار الأبدي ❤️</h2>
-            <p>بعد كل هاي اللقاءات، أني عرفت إنو مو بس اختاريت بنية.. أني اختاريت عائلة كاملة بشخص واحد. أني مو بس أحبج، أني مغرم بيج وعابر مرحلة الهوس. ما أريد غير ربي يجمعني بيج ويقربج ولا يحرمني منج يا رب. أنتِ مو اختيار، أنتِ قرار.. أحبج دكتورتي.</p><div class="comment">🔥 كلمة أخيرة: تره عمر بايع الدنيا علمودج يا دكتورة! هنيالي على هيج حب!</div>
+            <p>بعد كل هاي اللقاءات، أني عرفت إنو مو بس اختاريت بنية.. أني اختاريت عائلة كاملة بشخص واحد. أني مو بس أحبج، أني مغرم بيج وعابر مرحلة الهوس. ما أريد غير ربي يجمعني بيج ويقربج ولا يحرمني منج يا رب. أنتِ مو اختيار، أنتِ قرار.. أحبج دكتورتي.</p>
+        </div>
+
+        <div class="s">
+            <h2>كلمة من القلب 🔥</h2>
+            <p>الحب مو بس كلمة، الحب حياة وأنتِ صرتي حياتي كلها. عمر اليوم مو بس يحبج، عمر يقدس وجودج بحياته ويشوفج الأمان والموطن اللي ماله بديل. أنتِ الإنسانة اللي خلتني أعرف معنى السكينة، وأني واعدت نفسي أكون الج السند والكتف اللي ما يميل أبداً.</p>
+            <div class="comment">✨ رسالة أخيرة: دكتورة زهراء، تره عمر اختصر الدنيا كلها بيج، وما يشوف غيرج وطن.. ربي يديم هالقدسية بحبكم ويجمعكم بالحلال.</div>
         </div>
 
         <div class="barcode-box">
@@ -108,20 +48,11 @@
             <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.youtube.com/watch?v=AUnVOn77I7c" alt="Barcode">
         </div>
     </div>
-
     <script>
-        // برمجة ظهور الكلام عند التمرير (Scroll)
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.3 });
-
+            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
+        }, { threshold: 0.1 });
         document.querySelectorAll('.s').forEach(section => observer.observe(section));
-
-        // برمجة مطر القلوب
         function createHeart() {
             const heart = document.createElement('div');
             heart.classList.add('heart');
