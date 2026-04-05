@@ -13,11 +13,8 @@
         h2 { color: #8b0000; margin-bottom: 15px; font-weight: 700; font-size: 24px; }
         p { font-size: 19px; line-height: 2.1; margin: 0; color: #7a3e48; font-weight: 400; text-shadow: 0 0 1px rgba(0,0,0,0.8); }
         .comment { font-style: italic; color: #8b0000; font-size: 15px; margin-top: 20px; padding-top: 15px; border-top: 1px dashed rgba(122, 62, 72, 0.3); }
-        
-        /* برمجة القلوب الصغيرة الناعمة بالخلفية */
         .heart { position: fixed; top: -10%; font-size: 14px; color: rgba(122, 62, 72, 0.5); user-select: none; pointer-events: none; z-index: 1; animation: fall linear forwards; }
         @keyframes fall { to { transform: translateY(110vh) rotate(360deg); } }
-        
         .barcode-box { text-align: center; margin-top: 40px; padding: 30px; background: #fff; border-radius: 45px; border: 3px solid #8b0000; }
         .barcode-box p { color: #000; font-weight: bold; margin-bottom: 15px; }
         .white-heart { color: #ffffff; text-shadow: 0 0 5px #ccc; font-size: 20px; }
@@ -49,7 +46,7 @@
         </div>
         <div class="barcode-box">
             <p>امسحي الكود يا دكتورتي (اغنيتنا <span class="white-heart">🤍</span>)</p>
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.youtube.com/watch?v=0hWqW1m7_xY" alt="Barcode">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.youtube.com/watch?v=F_fO5Bv0x9k" alt="Barcode">
         </div>
     </div>
     <script>
@@ -57,19 +54,17 @@
             entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); } });
         }, { threshold: 0.1 });
         document.querySelectorAll('.s').forEach(section => observer.observe(section));
-        
-        // وظيفة صنع مطر القلوب الصغيرة
         function createHeart() {
             const heart = document.createElement('div');
             heart.classList.add('heart');
             heart.innerHTML = '❤';
             heart.style.left = Math.random() * 100 + 'vw';
             heart.style.animationDuration = Math.random() * 3 + 5 + 's';
-            heart.style.opacity = Math.random() * 0.5 + 0.2; // شفافية متغيرة للجمالية
+            heart.style.opacity = Math.random() * 0.5 + 0.2;
             document.body.appendChild(heart);
             setTimeout(() => { heart.remove(); }, 8000);
         }
-        setInterval(createHeart, 300); // سرعة نزول القلوب
+        setInterval(createHeart, 300);
     </script>
 </body>
 </html>
