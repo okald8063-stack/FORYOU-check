@@ -1,57 +1,49 @@
-<div class="container" id="content" style="display:none;">
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خُلِدَت في القلب</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&display=swap');
+        body { margin: 0; background: #040102; color: #d1b1bb; font-family: 'Cairo', sans-serif; direction: rtl; text-align: right; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .container { width: 85%; max-width: 700px; display: none; padding: 50px 0; }
+        .story-block { margin-bottom: 80px; opacity: 0; transition: 3s; border-right: 1px solid #a67380; padding-right: 20px; }
+        .story-block.show { opacity: 1; }
+        h1 { color: #a67380; text-align: center; font-size: 30px; }
+        h2 { color: #fff; font-size: 22px; }
+        p { font-size: 18px; line-height: 2; }
+        #startBtn { padding: 15px 40px; background: transparent; border: 1px solid #a67380; color: #a67380; cursor: pointer; font-size: 18px; font-family: 'Cairo'; }
+    </style>
+</head>
+<body>
+    <button id="startBtn" onclick="start()">دخول إلى الذاكرة</button>
+    <div class="container" id="content">
         <h1>خُلِدَت في القلب</h1>
-
         <div class="story-block" id="b1">
-            <span class="date">اللقاء الأول – 16 يوليو 2025</span>
-            <h2>ارتعاش البدايات</h2>
-            <p>كان الجو دافي والشمس تداعب المدينة، وأنا واقف، قلبي يدق بسرعة ما أقدر أهدّي نفسي. شفتها من بعيد، دكتورتي زهراء، قاعدة على النافذة… عيونها التفتت إلي، وابتسامتها الخجولة كانت تكفي تخلي قلبي يطير.</p>
-            <p>نزلت إلى مكان قريب وجلست متظاهرًا بالتعب عشان أخفي التوتر، جبت معي جبس وعصير. ريحتها وصلت إلي قبل ما أشوفها… عطرها غمرني، وكل العالم حولي اختفى. تبادلنا النظرات، وبعُدت شوية وهي تدفع ثمن مشترياتها وتغادر. شعرت بالغيرة والشوق بنفس الوقت، ولحقتها بعدين على الهاتف، وبعثت لها قبلة عن بعد… كل لحظة وياها كانت مليانة مشاعر حقيقية: التوتر، الشوق، الحنية، وحتى الغيرة.</p>
+            <h2>اللقاء الأول – 16 يوليو 2025</h2>
+            <p>كان الجو دافي والشمس تداعب المدينة، وأنا واقف، قلبي يدق بسرعة ما أقدر أهدّي نفسي. شفتها من بعيد، دكتورتي زهراء، قاعدة على النافذة… عيونها التفتت إلي، وابتسامتها الخجولة كانت تكفي تخلي قلبي يطير. نزلت إلى مكان قريب وجلست متظاهرًا بالتعب عشان أخفي التوتر، جبت معي جبس وعصير. ريحتها وصلت إلي قبل ما أشوفها… عطرها غمرني، وكل العالم حولي اختفى.</p>
         </div>
-
         <div class="story-block" id="b2">
-            <span class="date">اللقاء الثاني – 17 يوليو 2025</span>
-            <h2>دفء السكون</h2>
-            <p>هاليوم كان مختلف، قلبي مستعد أكثر، لكن التوتر ما تركني. شفتها من نافذة الطابق الثاني، ريحتها وصلت إلي قبل ما أكمل خطوة… شعرت بشي داخلي يسحبني نحوها.</p>
-            <p>جلسنا مع بعض، تبادلنا الحديث، لعبت بإيدها، وغفّت على كتفي للحظة… لحظة واحدة بس، لكنها كانت كافية تخلي قلبي يذوب. قبلت يدها وحرف اسمها المحروق بالنار، وكل لحظة صارت أقوى من اللي قبلها. لما غادرت، حضنتني أمام الناس وقبّلت رقبتي وخدي… شعرت أن كل جزء مني صار ملكها، وكل لحظة بعيدة عنها ثقيلة علي.</p>
+            <h2>اللقاء الثاني – 17 يوليو 2025</h2>
+            <p>هاليوم كان مختلف، قلبي مستعد أكثر، لكن التوتر ما تركني. شفتها من نافذة الطابق الثاني، ريحتها وصلت إلي قبل ما أكمل خطوة… شعرت بشي داخلي يسحبني نحوها. جلسنا مع بعض، تبادلنا الحديث، لعبت بإيدها، وغفّت على كتفي للحظة… لحظة واحدة بس، لكنها كانت كافية تخلي قلبي يذوب.</p>
         </div>
-
         <div class="story-block" id="b3">
-            <span class="date">اللقاء الثالث – 18 يوليو 2025</span>
-            <h2>رسوخ الأبدية</h2>
+            <h2>اللقاء الثالث – 18 يوليو 2025</h2>
             <p>هالمرة كل شيء صار أعمق… قلبي صار مربوط بيها بالكامل. كل لمسة، كل ابتسامة، كل نظرة كانت تقول أكثر من أي كلام. شعرت أن حياتي كلها مرتبطة بيها، وأنها محور عالمي كله. كل ثانية وياها كانت درس عن الحب الحقيقي: صادق، عميق، ومؤثر.</p>
-            <p>حتى بعد ما نفترق، كل ذكرى، كل لحظة، كل شعور ظل محفور بقلبي… وكل مرة أفكر بيها، قلبي يرجع يرفرف، وروحي تتذكر كل لحظة، وكل نظرة، وكل لمسة… وكلها تقول: "هاذي هي الحياة لما تحب شخص حقيقي، بالكامل، بدون أي تحفظ."</p>
         </div>
     </div>
-
-    <audio id="bgMusic" loop><source src="song.mp3" type="audio/mpeg"></audio>
-
+    <audio id="music"><source src="song.mp3" type="audio/mpeg"></audio>
     <script>
-        function initStory() {
+        function start() {
             document.getElementById('startBtn').style.display = 'none';
             document.getElementById('content').style.display = 'block';
-            const music = document.getElementById('bgMusic');
-            music.currentTime = 38;
-            music.play();
-
-            const blocks = document.querySelectorAll('.story-block');
-            blocks.forEach((block, index) => {
-                setTimeout(() => {
-                    block.classList.add('show');
-                    block.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }, index * 6500); /* حركة ظهور أبطأ وفراغ أكبر للمشاعر */
+            let m = document.getElementById('music');
+            m.currentTime = 38; m.play();
+            let blocks = document.querySelectorAll('.story-block');
+            blocks.forEach((b, i) => {
+                setTimeout(() => { b.classList.add('show'); }, i * 3000);
             });
-
-            setInterval(createHeart, 600); /* قلوب خافتة أكثر */
-        }
-
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.innerHTML = '❤';
-            heart.className = 'floating-heart';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = (Math.random() * 4 + 7) + 's';
-            document.body.appendChild(heart);
-            setTimeout(() => heart.remove(), 11000);
         }
     </script>
 </body>
