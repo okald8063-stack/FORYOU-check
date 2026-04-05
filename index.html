@@ -6,17 +6,28 @@
     <title>إلى دكتورتي الأبدية</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-        body { margin: 0; background: #080808; color: #ffc1e3; font-family: 'Cairo', sans-serif; direction: rtl; text-align: right; overflow-x: hidden; }
+        
+        body { margin: 0; background: #0a0a0a; color: #a96c7a; font-family: Cairo, sans-serif; direction: rtl; text-align: right; overflow-x: hidden; }
+        
         .container { width: 85%; max-width: 650px; margin: 50px auto; padding: 20px; z-index: 10; position: relative; }
-        .s { margin-bottom: 60px; padding: 35px; background: rgba(15, 15, 15, 0.95); border: 1px solid rgba(255, 128, 171, 0.25); border-radius: 50px; box-shadow: 0 20px 50px rgba(0,0,0,0.9); opacity: 0; transform: translateY(40px); transition: all 1.2s ease-out; }
+        
+        .s { margin-bottom: 60px; padding: 35px; background: rgba(10, 10, 10, 0.9); border: 1px solid rgba(169, 108, 122, 0.2); border-radius: 50px; opacity: 0; transform: translateY(40px); transition: all 1.2s ease-out; }
+        
         .s.visible { opacity: 1; transform: translateY(0); }
-        h2 { color: #ff80ab; margin-bottom: 15px; font-weight: 700; font-size: 24px; }
-        p { font-size: 19px; line-height: 2.1; margin: 0; color: #fce4ec; }
-        .comment { font-style: italic; color: #ff80ab; font-size: 15px; margin-top: 20px; padding-top: 15px; border-top: 1px dashed rgba(255, 128, 171, 0.3); }
-        .heart { position: fixed; top: -10%; font-size: 18px; color: rgba(255, 64, 129, 0.4); user-select: none; pointer-events: none; z-index: 1; animation: fall linear forwards; }
+        
+        h2 { color: #a96c7a; margin-bottom: 15px; font-weight: 700; font-size: 24px; text-shadow: 0 0 5px rgba(169, 108, 122, 0.3); }
+        
+        /* لون النص الجديد (وردي عميق يميل على الأسود) */
+        p { font-size: 19px; line-height: 2.1; margin: 0; color: #a96c7a; font-weight: 400; text-shadow: 0 0 1px rgba(0,0,0,0.5); }
+        
+        .comment { font-style: italic; color: #a96c7a; font-size: 15px; margin-top: 20px; padding-top: 15px; border-top: 1px dashed rgba(169, 108, 122, 0.3); }
+        
+        .heart { position: fixed; top: -10%; font-size: 18px; color: rgba(169, 108, 122, 0.4); user-select: none; pointer-events: none; z-index: 1; animation: fall linear forwards; }
+        
         @keyframes fall { to { transform: translateY(110vh) rotate(360deg); } }
-        .barcode-box { text-align: center; margin-top: 40px; padding: 30px; background: #fff; border-radius: 45px; border: 2px solid #ff80ab; }
-        .barcode-box p { color: #000; font-weight: bold; margin-bottom: 15px; }
+        
+        .barcode-box { text-align: center; margin-top: 40px; padding: 30px; background: #fff; border-radius: 45px; border: 2px solid #a96c7a; }
+        .barcode-box p { color: #000; font-weight: bold; margin-bottom: 15px; background: none; }
     </style>
 </head>
 <body>
@@ -25,16 +36,20 @@
             <h2>اللقاء الأول – 16 يوليو ❤️</h2>
             <p>شفتها من شباك المصعد، وريحتها وصلتني قبل ما أكمل خطوة… أحس بشي يسحبني إلها سحل. گعدنا سوية وحجينا، لعبت بإيدها، وغفت على كتفي للحظة… جانت كافية تخلي گلبي يذوب ذوبان. بست إيدها وحرف اسمها "المحروق بالنار". لما راحت، حضنتني گدام الناس وبستني من رگبتي وخدي… حسيت كل ذرة بية صارت ملكها.</p>
             <div class="comment">😉 تعليق "أخوك": لمحة من شباك المصعد وبست إيدها؟ ها يا "كبلات" الظيم! ربي يحفظكم لبعض.</div>
-        </div><div class="s">
+        </div>
+
+        <div class="s">
             <h2>اللقاء الثاني – 17 يوليو (سحر الليل) ❤️</h2>
-            <p>الجو جان دافي والظلمة تداعب ضوايات المدينة، وأني جنت گاعد، گلبي يدگ بسرعة مو طبيعية. شفتها من بعيد من ورا الشباك قبل لا تفوت، دكتورتي زهراء جتي هيَّ… عيونها التفتت إلي، وابتسامتها الخجولة بوسط هدوء الليل خلت گلبي يطير. 
-            جبت وياي جبس وعصير. ريحتها وصلتني قبل ما أشوفها… عطرها غمرني بنسمة ليلية. تبادلنا النظرات، ولحكتها بالتلفون وبستها "قبلة عن بعد"… كل لحظة وياها جانت مليانة مشاعر صدگ.</p>
-            <div class="comment">😂 مخرجنا البطل: يعني أنت الكاعد وهي الجتي؟ والله يا عمر سوالفك تگعد بالگلب!</div>
+            <p>الدنيا جانت ليل وهدوء، وأني جنت گاعد، گلبي يدگ بسرعة. شفتها من بعيد من ورا الشباك قبل لا تفوت، دكتورتي زهراء جتي هيَّ… عيونها التفتت إلي، وابتسامتها الخجولة بوسط هدوء الليل خلت گلبي يطير. جبت وياي جبس وعصير. ريحتها غمرتني بنسمة ليلية. تبادلنا النظرات، ولحكتها بالتلفون وبستها "قبلة عن بعد"… كل لحظة وياها جانت مليانة مشاعر صدگ.</p>
+            <div class="comment">😂 "هنيالي" عليكم: يعني أنت الكاعد وهي الجتي وجايب جبس وعصير؟ والله يا عمر سوالفك تگعد بالگلب!</div>
+        </div><div class="s">
+            <h2>اللقاء الثالث – 18 يوليو ❤️</h2>
+            <p>هالمرة كل شي صار أعمق… گلبي صار مربوط بيها ربط. كل لمسة وابتسامة ونظرة جانت تگول حجي ما تگوله الكتب. هي صارت محور عالمي. كل ثانية وياها جانت درس بالحب الحقيقي: الصادق، العميق، والمؤثر. كل ذكرى تظل محفورة بگلبي، وكلما أفكر بيها يرجع گلبي يرفرف من جديد.</p>
         </div>
 
         <div class="s">
             <h2>القرار الأبدي ❤️</h2>
-            <p>بعد كل هاي اللقاءات، أني عرفت إنو مو بس اختاريت بنية.. أني اختاريت عائلة كاملة بشخص واحد. أني مو بس أحبج، أني مغرم بيج وعابر مرحلة الهوس. ما أريد غير ربي يجمعني بيج ويقربج ولا يحرمني منج يا رب. أنتِ مو اختيار، أنتِ قرار.. أحبج دكتورتي.</p>
+            <p>بعد كل هاي اللقاءات، أني عرفت إنو مو بس اختاريت بنية.. أني اختاريت عائلة كاملة بشخص واحد (أم وأخت وأخ وأب وسند ودنيا كاملة). أني مو بس أحبج، أني مغرم بيج وعابر مرحلة الهوس. ما أريد غير ربي يجمعني بيج ولا يحرمني منج يا رب. أنتِ مو اختيار، أنتِ قرار.. أحبج دكتورتي.</p>
         </div>
 
         <div class="s">
