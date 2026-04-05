@@ -7,96 +7,132 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
         
-        /* الخلفية سوداء فخمة */
         body { 
             margin: 0; 
-            background-color: #000000; 
-            color: #fce4ec; 
+            background: #0d0d0d; /* أسود ملكي مطفي */
+            color: #000; 
             font-family: 'Cairo', sans-serif; 
             direction: rtl; 
             text-align: right; 
-            overflow-x: hidden; 
+            overflow-x: hidden;
         }
 
-        /* الحواف مقوسة واللون وردي خفيف */
         .container { 
-            width: 90%; 
+            width: 85%; 
             max-width: 650px; 
-            margin: 40px auto; 
-            padding: 30px; 
-            border: 2px solid #ff80ab; 
-            border-radius: 50px; /* أقواس قوية وناعمة */
-            background: rgba(255, 128, 171, 0.05); 
-            box-shadow: 0 0 25px rgba(255, 128, 171, 0.2);
-            backdrop-filter: blur(10px);
+            margin: 50px auto; 
+            padding: 20px;
+            z-index: 10;
+            position: relative;
         }
 
+        /* تأثير الحركة للبارتات */
         .s { 
-            margin-bottom: 40px; 
-            padding: 20px; 
-            border-bottom: 1px solid rgba(255, 128, 171, 0.2); 
-            border-radius: 30px;
+            margin-bottom: 60px; 
+            padding: 30px; 
+            background: rgba(255, 193, 227, 0.95); /* وردي خفيف جداً يبرز النص الأسود */
+            border-radius: 45px; /* أقواس ناعمة وفخمة */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            opacity: 0; /* مخفي بالبداية */
+            transform: translateY(50px); /* نازل للي جوا */
+            transition: all 1.5s ease-out; /* سرعة الحركة */
         }
 
-        h2 { color: #ff80ab; font-size: 24px; margin-bottom: 15px; }
-        p { font-size: 18px; line-height: 2; margin: 0; white-space: pre-line; }
+        /* الكلاس اللي يشغل الحركة */
+        .s.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 { color: #d81b60; margin-bottom: 15px; font-weight: 700; border-bottom: 2px solid rgba(216, 27, 96, 0.2); display: inline-block; }
+        p { font-size: 19px; line-height: 2.2; margin: 0; font-weight: 400; }
 
         .comment { 
             font-style: italic; 
-            color: #f48fb1; 
-            font-size: 15px; 
-            margin-top: 15px; 
-            background: rgba(255, 255, 255, 0.05); 
-            padding: 15px; 
-            border-radius: 20px; 
+            color: #ad1457; 
+            font-size: 16px; 
+            margin-top: 20px; 
+            padding-top: 15px;
+            border-top: 1px dashed #ad1457;
         }
 
-        /* القلوب التي تتطاير */
+        /* مطر القلوب */
         .heart {
             position: fixed;
-            top: 100%;
-            color: #ff4081; /* وردي حلو */
-            font-size: 20px;
-            z-index: 999;
+            top: -10%;
+            font-size: 18px;
+            color: rgba(255, 64, 129, 0.4); /* وردي شفاف مو نشاز */
             user-select: none;
             pointer-events: none;
-            animation: floatUp 8s linear infinite;
+            z-index: 1;
+            animation: fall linear forwards;
         }
 
-        @keyframes floatUp {
-            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+        @keyframes fall {
+            to { transform: translateY(110vh) rotate(360deg); }
         }
 
         .barcode-box { 
             text-align: center; 
-            margin-top: 30px; 
-            padding: 20px; 
-            border: 2px solid #ff80ab; 
-            border-radius: 40px; 
+            margin-top: 40px; 
+            padding: 30px; 
             background: #fff; 
+            border-radius: 40px;
+            border: 3px solid #ff80ab;
         }
-        .barcode-box p { color: #000; font-weight: bold; font-size: 16px; margin-bottom: 10px; }
-        .barcode-box img { width: 150px; }
+        .barcode-box p { color: #000; font-weight: bold; margin-bottom: 15px; background: none; }
     </style>
 </head>
 <body>
 
     <div class="container">
         <div class="s">
-            <h2>اللقاء الأول – 16 يوليو 2025 (بالليل) ❤️</h2>
-            <p>الدنيا جانت ليل وهدوء، والظلمة تداعب ضوايات المدينة، وأني واگف، گلبي يدگ بسرعة مو طبيعية. شفتها من بعيد، دكتورتي زهراء، گاعدة يم النافذة بالليل… عيونها التفتت إلي، وابتسامتها الخجولة بوسط هدوء الليل خلت گلبي يطير.
-            نزلت لمكان قريب وجلست وسويت نفسي تعبان، جبت وياي جبس وعصير. ريحتها وصلتني قبل ما أشوفها… عطرها غمرني بنسمة ليلية. تبادلنا النظرات، ولحكتها بالتلفون وبستها "قبلة عن بعد"… كل لحظة وياها جانت مليانة مشاعر صدگ: توتر، شوگ، حنية، وحتى غيرة تجوي.</p>
-            <div class="comment">😂 "هنيالي" عليكم: يابة دكتورة وبالنافذة وبنص الليل وأنت جاي بجبس وعصير؟ والله يا عمر سوالفك "تگعد بالگلب"!</div>
+            <h2>اللقاء الأول – 16 يوليو (بالليل) ❤️</h2>
+            <p>الجو جان دافي والشمس تداعب المدينة، وأني واگف، گلبي يدگ بسرعة مو طبيعية. شفتها من بعيد، دكتورتي زهراء، گاعدة يم النافذة بالليل… عيونها التفتت إلي، وابتسامتها الخجولة بوسط هدوء الليل خلت گلبي يطير بصدري. جبت وياي جبس وعصير. ريحتها غمرتني بنسمة ليلية. تبادلنا النظرات، ولحكتها بالتلفون وبستها "قبلة عن بعد"… كل لحظة وياها جانت مليانة مشاعر صدگ.</p>
+            <div class="comment">😂 هنيالي عليكم: دكتورة وبالنافذة وبنص الليل وأنت جاي بجبس وعصير؟ والله يا عمر سوالفك تگعد بالگلب!</div>
         </div>
 
         <div class="s">
             <h2>اللقاء الثاني – 17 يوليو ❤️</h2>
-            <p>شفتها من نافذة الطابق الثاني، وريحتها وصلتني قبل ما أكمل خطوة… أحس بشي يسحبني إلها سحل.
-            گعدنا سوية وحجينا، لعبت بإيدها، وغفت على كتفي للحظة… جانت كافية تخلي گلبي يذوب ذوبان. بست إيدها وحرف اسمها "المحروق بالنار". لما راحت، حضنتني گدام الناس وبستني من رگبتي وخدي… حسيت كل ذرة بية صارت ملكها.</p>
+            <p>شفتها من نافذة الطابق الثاني، وريحتها وصلتني قبل ما أكمل خطوة… أحس بشي يسحبني إلها سحل. گعدنا سوية وحجينا، لعبت بإيدها، وغفت على كتفي للحظة… جانت كافية تخلي گلبي يذوب ذوبان. بست إيدها وحرف اسمها "المحروق بالنار". لما راحت، حضنتني گدام الناس وبستني من رگبتي وخدي.</p>
             <div class="comment">😉 تعليق "أخوك": غفت على كتفك وبست إيدها؟ ها يا "كبلات" الظيم! ربي يحفظكم لبعض.</div>
         </div>
 
         <div class="s">
             <h2>القرار الأبدي ❤️</h2>
-            <p>بعد كل هاي اللقاءات، أني عرفت إنو مو بس اختاريت بنية.. أني اختاريت عائلة كاملة بشخص واحد (أم وأخت وأخ وأب وسند ودنيا كاملة). أني مو بس أحبج، أني مغرم بيج وعابر مرحلة الهوس.
+            <p>بعد كل هاي اللقاءات، أني عرفت إنو مو بس اختاريت بنية.. أني اختاريت عائلة كاملة بشخص واحد. أني مو بس أحبج، أني مغرم بيج وعابر مرحلة الهوس. ما أريد غير ربي يجمعني بيج ويقربج ولا يحرمني منج يا رب. أنتِ مو اختيار، أنتِ قرار.. أحبج دكتورتي.</p><div class="comment">🔥 كلمة أخيرة: تره عمر بايع الدنيا علمودج يا دكتورة! هنيالي على هيج حب!</div>
+        </div>
+
+        <div class="barcode-box">
+            <p>امسحي الكود يا دكتورتي (أغنيتنا ❤️)</p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.youtube.com/watch?v=AUnVOn77I7c" alt="Barcode">
+        </div>
+    </div>
+
+    <script>
+        // برمجة ظهور الكلام عند التمرير (Scroll)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.s').forEach(section => observer.observe(section));
+
+        // برمجة مطر القلوب
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 5 + 's';
+            heart.style.opacity = Math.random();
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 8000);
+        }
+        setInterval(createHeart, 350);
+    </script>
+</body>
+</html>
